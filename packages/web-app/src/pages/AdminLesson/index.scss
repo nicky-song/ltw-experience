@@ -1,0 +1,87 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/card_variables.scss';
+
+.header-container::before {
+  content: '';
+  position: fixed;
+  background: $color-bg-container;
+  height: 100%;
+  width: 100%;
+}
+.header-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &__title-container {
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    left: 0px;
+    top: 0px;
+    padding-top: $padding-sm + px;
+    padding-left: $padding + px;
+  }
+
+  &__body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // centers the content a bit (and is still responsive)
+    max-height: 1000px;
+  }
+
+  &__quiz-button {
+    position: fixed;
+    right: $padding + px;
+  }
+
+  &__text {
+    margin-top: $margin-xxs + px;
+  }
+
+  &__card-container {
+    margin: auto;
+    position: relative;
+
+    &__card-spacer {
+      width: $card-width;
+    }
+  }
+
+  &__card-display {
+    margin-right: 50px;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: $margin-xl + px;
+  }
+
+  &__card-create-container {
+    position: fixed;
+    right: 0px;
+    margin: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  &__create-card {
+    margin: $margin-sm + px;
+    transform: scale(1.5);
+  }
+}
+
+.back-button.ant-btn.ant-btn-primary {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: $color-text;
+  margin-right: $margin-sm + px;
+}
+
+.back-button.ant-btn.ant-btn-primary:hover {
+  color: black;
+  background-color: transparent;
+  border: 1px solid $color-primary-hover;
+}

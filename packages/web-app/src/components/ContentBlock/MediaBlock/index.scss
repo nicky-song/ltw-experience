@@ -1,0 +1,174 @@
+@import '../TextBlock/index.scss';
+@import '@/styles/_variables.scss';
+
+.media-block {
+  margin: $margin-sm + px;
+  &__editable {
+    @extend .content-block__editable;
+  }
+
+  &__component {
+    @extend .content-block--component;
+  }
+
+  &__pointer {
+    @extend .content-block__pointer;
+  }
+
+  &__media {
+    position: relative;
+    margin-bottom: $margin + px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__video {
+    width: 100%;
+    border-radius: $border-radius-lg + px;
+    background-color: $color-primary-base;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: $border-radius-lg + px;
+  }
+
+  &__image-fullscreen {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__image-expand-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: $color-text-base;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image-collapse-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  &__fullscreen-expand-button {
+    width: 30px;
+    height: 30px;
+    background-color: $color-text-base;
+    border-radius: $size-xs + px;
+  }
+
+  &__fullscreen-collapse-button {
+    width: 40px;
+    height: 40px;
+    background-color: $color-text-base;
+  }
+
+  &__image-collapse-overlay {
+    position: absolute;
+    right: $padding-xs + 1px;
+    top: $padding + px;
+  }
+
+  &__image-expand-overlay {
+    position: absolute;
+    right: $margin-lg + px;
+    top: $margin-lg + px;
+  }
+
+  &__image-icon {
+    color: $color-bg-base;
+  }
+
+  @mixin center-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  @mixin add-media-common {
+    background-repeat: no-repeat;
+    border-radius: $border-radius-lg + px;
+    background-color: $color-bg-container;
+    > span {
+      margin-right: $margin-xs + px;
+    }
+    height: 100%;
+    background-size: 100% 100%;
+  }
+
+  &__add-media-wrapper {
+    @include center-block;
+    height: 251px;
+  }
+
+  &__add-audio-wrapper {
+    @include center-block;
+    height: 60px;
+  }
+
+  &__add-media {
+    @include center-block;
+    @include add-media-common;
+    background-image: url('../../../assets/emptyLarge.svg');
+  }
+
+  &__add-audio {
+    @include center-block;
+    @include add-media-common;
+    background-image: url('../../../assets/emptySmall.svg');
+  }
+
+  &__disable-dashed {
+    background-image: none;
+  }
+
+  &__disable-hover:hover {
+    background-image: none;
+  }
+
+  &__media-disabled {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $color-primary-base;
+    opacity: 35%;
+    z-index: 2;
+    border-radius: $border-radius-sm + px;
+  }
+
+  &__controls-background {
+    @include center-block;
+    background-color: $color-text-disabled;
+    height: 60px;
+    border-radius: $border-radius-sm + px;
+  }
+
+  &__controls-shroud {
+    z-index: 2;
+    opacity: 35%;
+    background: black;
+    border-radius: $border-radius-lg + px;
+    height: 100%;
+    position: absolute;
+    max-height: 30px;
+    width: 320px;
+  }
+
+  &__audio {
+    max-height: 30px;
+    border-radius: $border-radius-lg + px;
+    width: 320px;
+  }
+
+  &__audio::-webkit-media-controls-enclosure {
+    border-radius: $border-radius-lg + px;
+  }
+}

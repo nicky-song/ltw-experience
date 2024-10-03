@@ -1,0 +1,21 @@
+@import '@/styles/_variables.scss';
+
+.progress-markers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  &__marker {
+    height: 4px;
+    margin: $margin-xxs - 2 + px;
+    width: 100%;
+    background-color: $color-primary-base;
+    border-radius: 10px;
+  }
+
+  &__done.progress-markers__marker {
+    background-color: $color-primary-hover;
+  }
+}

@@ -1,0 +1,90 @@
+@import '@/styles/variables';
+.media-upload {
+  display: flex;
+  &__menu-nav {
+    border-bottom: none;
+  }
+
+  &__preview-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 220px;
+  }
+  &__preview {
+    box-sizing: border-box;
+    width: 87px;
+    height: 87px;
+    border-radius: 4px;
+    object-fit: cover;
+    &__empty,
+    &__empty-danger {
+      width: 104px;
+      height: 104px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: $padding-sm + px;
+      margin: 0px;
+      font-size: $font-size-xl + 10 + px;
+      .ant-empty-image {
+        height: auto;
+        margin: 0px;
+      }
+    }
+    &__empty-danger {
+      color: $color-error-base;
+      border: 1px solid $color-error-base;
+      border-radius: 6px;
+      background: $control-item-bg-hover;
+    }
+    &__empty {
+      min-width: 104px;
+      min-height: 104px;
+      color: $color-icon;
+      background: url('../../assets/UploadBorder.svg');
+      background-repeat: no-repeat;
+    }
+
+    &__info {
+      display: flex;
+      margin-left: $margin + px;
+      flex-direction: column;
+    }
+
+    &__danger {
+      > span {
+        color: $color-error-base;
+      }
+    }
+  }
+  &__preview-background {
+    width: 104px;
+    height: 104px;
+    background-color: $color-bg-container;
+    border: 1px solid $color-border;
+    padding: $padding-xs + px;
+    border-radius: 4px;
+  }
+  &__button {
+    background-color: $color-bg-container;
+    margin-bottom: $margin + px;
+    margin-right: $margin + px;
+    margin-top: $margin + px;
+  }
+
+  &__upload-buttons {
+    display: flex;
+  }
+
+  &__sound-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-xl * 1.5 + px;
+    color: $color-icon;
+  }
+}

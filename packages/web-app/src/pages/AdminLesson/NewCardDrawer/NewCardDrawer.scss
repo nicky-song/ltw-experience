@@ -1,0 +1,171 @@
+@import '@/styles/variables';
+
+.new-card-drawer {
+  &.ant-drawer-content {
+    border-radius: 8px 0 0 8px;
+    background: $color-bg-elevated;
+  }
+
+  & .ant-drawer-body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  &__menu-nav {
+    background: $color-bg-elevated;
+    border-bottom: none;
+
+    & > li {
+      padding-left: 0px;
+    }
+    & > .ant-menu-item {
+      font-weight: $font-weight-normal;
+      padding: 0px;
+      margin-right: $margin + px;
+
+      &:after {
+        inset-inline: 0px !important;
+      }
+    }
+    & > .ant-menu-item-selected {
+      font-weight: $font-weight-strong;
+    }
+  }
+
+  & .ant-drawer-close {
+    margin: 0px;
+  }
+  &__card-template-option {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    margin: 1rem 0;
+
+    &__graphic {
+      flex: 0 0 66px;
+      height: 90px;
+      border: 1px solid #d5d5d5;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-right: 16px;
+
+      &__icon {
+        font-size: 1.5rem;
+      }
+
+      &__lesson-graphic {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &__content-container {
+      width: 100%;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: $margin-xs + px;
+
+      &__title {
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.import-card-form {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__desc {
+    display: flex;
+    margin-top: $margin-sm + px;
+    > span {
+      margin-right: $margin-sm + px;
+      margin-bottom: $margin-sm + px;
+    }
+  }
+
+  &__submit {
+    align-self: flex-end;
+    margin-bottom: $margin-sm + px;
+  }
+
+  &__indexes {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 1;
+    > p {
+      margin: 0 $margin-lg + px $margin-lg + px $margin-lg + px;
+    }
+  }
+  &__tooltip {
+    color: $color-icon;
+  }
+
+  &__select-drop {
+    display: flex;
+    align-items: center;
+    > span.anticon {
+      padding-top: $padding-xxs - 2 + px;
+      padding-right: $padding-xxs + px;
+    }
+  }
+
+  &__dropdown-title {
+    display: block;
+    padding-left: $padding-sm + px;
+    padding-top: $padding-xxs + px;
+  }
+
+  &__dropdown-divider {
+    margin: $margin-xxs + px 0 $margin-xxs + px 0;
+  }
+
+  &__alert-space {
+    width: 100%;
+  }
+
+  &__preview {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: -($margin-lg) + px;
+    z-index: 1;
+    &-buttons {
+      margin-left: $margin-sm + px;
+    }
+  }
+
+  &__card-preview {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: -($margin-lg * 6) + px;
+  }
+  &__shroud {
+    background-color: $color-link-hover;
+    border-radius: 5px;
+    width: 46%;
+    height: 20px;
+    top: 167px;
+    position: absolute;
+    z-index: 0;
+  }
+
+  &__error {
+    color: $color-error-base;
+  }
+}

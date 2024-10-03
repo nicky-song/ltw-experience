@@ -1,0 +1,41 @@
+@import '@/styles/variables';
+
+.learning-item-overview {
+  &__back-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-left: $margin-sm + px;
+    > h4 {
+      margin: 0px;
+    }
+  }
+
+  &__right-nav {
+    margin-right: $margin-sm + px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    margin: $margin-sm + px $margin-lg + px $margin-lg - 4 + px $margin-lg + px;
+  }
+
+  &__details-dropdown {
+    display: flex;
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    > img {
+      margin-right: $margin-xxs + px;
+    }
+  }
+
+  &__card-grid {
+    display: inline-grid;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}

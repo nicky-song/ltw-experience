@@ -1,0 +1,68 @@
+@import '@/styles/_variables.scss';
+
+.navBarObject {
+  margin: $margin-sm + px;
+  display: flex;
+  align-items: center;
+}
+
+.leftDropdownContainer {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.middleButtonsContainer {
+  flex: 5;
+  justify-content: center;
+}
+
+.rightProfileContainer {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.navBarButton {
+  background-color: rgb(213, 208, 208);
+  color: black;
+  margin: $margin-xxs + px;
+  box-shadow: none;
+}
+
+.navBarButton:hover {
+  background-color: rgb(125, 125, 125) !important;
+  color: black !important;
+}
+
+.middleButtonsMenu {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: none;
+}
+
+.profileAvatar {
+  background-color: rgb(29, 29, 29);
+  color: white;
+  vertical-align: middle;
+}
+
+.middleButtonsMenu .ant-menu-title-content {
+  color: black !important;
+}
+
+.middleButtonsMenu .ant-menu-item-selected::after {
+  border-bottom-color: black !important;
+}
+
+.middleButtonsMenu .ant-menu-item:hover::after {
+  border-bottom-color: black !important;
+}
+
+.ant-dropdown-menu-item-selected {
+  color: black !important;
+  background-color: white !important;
+}
+
+.ant-dropdown-menu-item-active {
+  background-color: rgb(213, 208, 208) !important;
+}

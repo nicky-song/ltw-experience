@@ -1,0 +1,144 @@
+@import '@/styles/_variables.scss';
+
+.content-block {
+  &--component {
+    margin: $padding-lg + px 0px;
+    word-break: break-word;
+  }
+
+  &--editable {
+    &.ant-popover-open,
+    & div[data-slate-editor='true']:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 2px $color-primary;
+      border-radius: $border-radius-sm + px;
+    }
+    &:hover {
+      box-shadow: 0 0 0 2px $color-primary;
+      border-radius: $border-radius-sm + px;
+    }
+
+    &.ant-typography-edit-content {
+      inset-inline-start: 0px !important;
+      margin-top: 0px !important;
+      margin-bottom: 0.5em !important;
+    }
+
+    &.ant-typography-edit-content:hover {
+      box-shadow: none !important;
+    }
+
+    &.ant-typography-edit-content > textarea {
+      padding: 0px !important;
+    }
+
+    &.ant-popover-inner {
+      padding-bottom: $padding-xxs + px;
+    }
+  }
+
+  &__pointer {
+    cursor: pointer;
+  }
+
+  &__add-image-wrapper {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__add-image {
+    height: 100px;
+    width: 337px;
+    background-repeat: no-repeat;
+    background-image: url('../../../assets/cardMediaEmpty.svg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > span {
+      margin-right: $margin-xs + px;
+    }
+  }
+
+  &__popup-button,
+  &__popup-button-mid {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: $padding-xxs - 2 + px;
+  }
+
+  &__popup-button-mid {
+    margin: 0px 0px $margin-xs + px 0px;
+  }
+
+  &__link {
+    color: $color-link-active;
+  }
+
+  // Media blocks
+  &__media {
+    position: relative;
+    margin-bottom: $margin + px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__video {
+    width: 100%;
+    border-radius: $border-radius-sm + px;
+    background-color: $color-primary-base;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: $border-radius-sm + px;
+    // position: relative;
+  }
+
+  &__add-media-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 251px;
+  }
+
+  &__add-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    border-radius: $border-radius-lg + px;
+    background-color: $color-bg-container;
+    background-image: url('../../../assets/emptyMedia.svg');
+    background-size: 100% 100%;
+    > span {
+      margin-right: $margin-xs + px;
+    }
+    width: 100%;
+    height: 100%;
+  }
+
+  &__disable-dashed {
+    background-image: none;
+  }
+
+  &__disable-dashed-hover:hover {
+    background-image: none;
+  }
+
+  &__media-disabled {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $color-primary-base;
+    opacity: 35%;
+    z-index: 2;
+    border-radius: $border-radius-sm + px;
+  }
+}

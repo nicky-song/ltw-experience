@@ -1,0 +1,17 @@
+@import '@/styles/_variables.scss';
+
+.carousel {
+  &__container {
+    display: flex;
+  }
+}
+
+.ant-progress-inner .ant-progress-bg {
+  // Need to override success color
+  background-color: $color-primary-hover !important;
+}
+
+.ant-progress {
+  margin: 0px $margin-sm - 1 + px 0px $margin-sm - 1 + px;
+  width: 100%;
+}

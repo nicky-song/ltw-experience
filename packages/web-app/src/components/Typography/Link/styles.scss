@@ -1,0 +1,10 @@
+@import '@/styles/_variables.scss';
+
+.ant-typography.typography-link {
+  color: $color-primary-base;
+  font-size: $font-size-sm + px;
+}
+
+.ant-typography.typography-link:hover {
+  color: $color-primary-hover;
+}

@@ -1,0 +1,42 @@
+@import '@/styles/_variables.scss';
+
+.tableViewContainer {
+  margin-bottom: $margin-xxs + px;
+  margin-top: $margin-lg + px;
+  margin-left: $margin-xl + 50 + px;
+  margin-right: $margin-xl + 50 + px;
+}
+
+.table-dashboard-container {
+  margin: $margin-xs + px $margin-xl + 30 + px 0 $margin-xl + 30 + px;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__back-button.ant-btn.ant-btn-primary {
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: $color-text;
+    margin-right: $margin-sm + px;
+  }
+
+  &__back-button.ant-btn.ant-btn-primary#form-button:hover {
+    background-color: transparent;
+    color: $color-primary-hover;
+  }
+
+  &__header-buttons {
+    display: flex;
+    align-items: center;
+    h4 {
+      margin: 0px;
+    }
+  }
+}
+
+.ant-table-row:hover {
+  cursor: pointer;
+  cursor: hand;
+}

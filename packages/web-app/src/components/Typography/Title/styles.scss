@@ -1,0 +1,9 @@
+@import '@/styles/_variables.scss';
+
+.ant-typography.typography-title {
+  font-family: $base-base-normal-font-family;
+  font-size: $font-size-lg + px;
+
+  text-shadow: $box-shadow-0-x + px $box-shadow-2-y + px $box-shadow-2-blur + px
+    $box-shadow-1-color;
+}

@@ -1,0 +1,66 @@
+@import '@/styles/_variables.scss';
+
+.confidence__disabled-overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 90%;
+  background-color: black;
+  transition: visibility 0.25s, background-color 0.25s ease;
+  visibility: visible;
+}
+.confidence__card {
+  margin: $margin-lg + px $margin-sm + px $margin + px;
+  &__header {
+    font-size: $font-size-lg + px;
+    font-weight: $font-weight-strong;
+  }
+
+  &__scale {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: $margin-xs + px 0;
+
+    &__item {
+      width: 64px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__icon {
+        height: 40px;
+        margin-bottom: $margin-xs + px;
+
+        &__button.disabled-btn#form-button:hover {
+          border: 1px solid #d9d9d9;
+        }
+        &__button.ant-btn-default.ant-btn#form-button {
+          background-color: $color-border-bg;
+        }
+        &__selected.ant-btn-default.ant-btn#form-button {
+          border: 1px solid $color-link-hover;
+          background-color: $color-success-bg;
+        }
+      }
+
+      &__label {
+        font-size: $font-size-sm + px;
+        font-weight: $font-weight-strong;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: $margin-lg + px;
+    width: 100%;
+    color: $color-text-disabled !important;
+  }
+}

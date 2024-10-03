@@ -1,0 +1,39 @@
+@import '@/styles/_variables.scss';
+
+.form-button-background {
+  background-color: $color-primary-base;
+}
+
+.form-button-background#form-button:hover {
+  background-color: $color-primary-hover;
+}
+
+.form-button {
+  font-size: $font-size-lg + px;
+  height: 100%;
+}
+
+.ant-btn-default.ant-btn#form-button {
+  background-color: $color-primary-hover;
+  color: $color-bg-elevated;
+}
+
+.ant-btn-default.ant-btn#form-button:hover {
+  background-color: $color-primary-base;
+  border: 1px solid $color-primary-base;
+}
+
+.ant-btn-ghost.ant-btn#form-button {
+  background-color: $color-border-bg;
+  border: 1px solid $color-border;
+}
+
+.ant-btn-ghost.ant-btn#form-button:hover:not([disabled]) {
+  color: $color-primary-hover;
+}
+
+.disabled-btn#form-button {
+  cursor: not-allowed !important;
+  background-color: $color-bg-container-disabled !important;
+  color: $color-text-disabled;
+}

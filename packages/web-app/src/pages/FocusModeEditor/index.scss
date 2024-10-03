@@ -1,0 +1,94 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/card_variables.scss';
+
+.block-editing-page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  &__card-wrapper {
+    overflow: hidden;
+    border: $card-border-width solid $color-primary;
+    border-radius: $border-radius-lg + px;
+    position: relative;
+  }
+
+  &__card-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 690px;
+    width: $card-width;
+    background-color: $color-bg-base;
+  }
+
+  &__header {
+    margin-bottom: $margin-lg - 4 + px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -$margin-xs + px;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-size: $font-size-lg + px;
+    margin-left: $margin-sm - 2 + px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 300px;
+  }
+
+  &__add-section {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: $margin-lg + px;
+    > button {
+      background-color: $color-bg-container;
+    }
+    margin-top: $margin + px;
+    left: 120px;
+  }
+
+  &__done-btn {
+    margin-right: $margin-sm + px;
+  }
+
+  ::-webkit-scrollbar {
+    background-color: $color-bg-base;
+    width: 7px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border: 1px solid $color-bg-base;
+    background-color: $color-border;
+    -webkit-border-radius: $border-radius-sm + px;
+  }
+  &__feedback-controls {
+    position: absolute;
+    left: -160px;
+    height: 100px;
+    width: 130px;
+    > button {
+      margin: $margin-sm + px $margin-sm + px $margin + px $margin-xs + px;
+      display: flex;
+      width: 130px;
+      padding: 0px $padding + px;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-size: $font-size + px !important;
+    }
+
+    &__confidence-icon {
+      padding-left: $padding-sm + px;
+    }
+  }
+
+  &__tooltip {
+    float: right;
+    margin-top: $margin + px;
+  }
+
+  &--tooltip-disabled {
+    pointer-events: none;
+    opacity: 0%;
+  }
+}

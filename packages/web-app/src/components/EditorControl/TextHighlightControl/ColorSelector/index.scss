@@ -1,0 +1,51 @@
+@import '@/styles/_variables.scss';
+
+.color-selector {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: $padding + px;
+  justify-items: center;
+  padding: $padding-xs + px;
+
+  &__icon {
+    border: none;
+    height: auto;
+    padding: 0;
+
+    &__wrapper {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      padding: $padding-xxs + px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      border: 1px solid $color-border;
+      background: $color-bg-container;
+    }
+    &__color-block {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      border-radius: 4px;
+      border: 1px solid $color-split;
+
+      &__custom {
+        background: linear-gradient(90deg, #985afa 0%, #84ffc7 100%),
+          linear-gradient(90deg, #e6fdea 0%, #8778fc 100%), #1677ff;
+      }
+      &--disabled {
+        width: 1px;
+        height: 30px;
+        transform: rotate(45deg);
+      }
+      &__check {
+        color: $color-bg-base;
+      }
+    }
+  }
+}
+
+.custom-color-selector {
+  padding-left: $padding + px;
+}

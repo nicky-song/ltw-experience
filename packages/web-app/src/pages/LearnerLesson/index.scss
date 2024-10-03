@@ -1,0 +1,238 @@
+@import '@/styles/_variables.scss';
+
+.learning-details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  &.ant-drawer-content {
+    border-radius: 8px 0 0 8px;
+  }
+
+  & .ant-drawer-header {
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+
+  & .ant-drawer-body {
+    padding: 0 $padding-xs + px $padding + px $padding-xs + px;
+    overflow-x: hidden;
+  }
+
+  & .ant-drawer-close {
+    margin: 0px;
+  }
+  &__button {
+    color: $color-text;
+  }
+
+  &__container {
+    margin: $margin-lg + px;
+  }
+  &__disabled {
+    color: $color-item-text-disabled;
+  }
+
+  &__lesson-title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    max-width: 500px;
+    margin-left: $margin + px;
+    margin-top: $margin-xxs + 2 + px;
+    font-family: $base-base-normal-font-family;
+    font-size: $font-size-lg + px;
+    font-style: normal;
+    font-weight: $font-weight-strong;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__menu-wrapper {
+    position: sticky;
+    top: 0;
+    background-color: $color-bg-base;
+  }
+
+  &__menu {
+    margin: $margin-sm + px;
+    &-nav {
+      border-bottom: none;
+      border-radius: $border-radius + px;
+      background: $color-bg-elevated;
+      & > li {
+        padding: 0px;
+      }
+      & > .ant-menu-item {
+        font-weight: $font-weight-normal;
+        padding: 0px;
+        margin-right: $margin + px;
+
+        &:after {
+          inset-inline: 0px !important;
+        }
+      }
+
+      & > .ant-menu-item-selected {
+        font-weight: $font-weight-strong;
+      }
+    }
+    &-container {
+      padding: 0 $padding + px 0 $padding + px;
+    }
+    &-img-name {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      > img {
+        height: 75px;
+        width: 75px;
+        margin-right: $margin-sm + px;
+        border-radius: $border-radius + px;
+      }
+      > h5 {
+        width: 200px;
+        margin: 0px;
+      }
+    }
+  }
+  &__img-placeholder {
+    height: 60px;
+    width: 60px;
+    margin-right: $margin-sm + px;
+    border-radius: $border-radius + px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#d9a8a8, #b5b8d9);
+  }
+
+  &__green-check {
+    color: $color-success;
+  }
+
+  &__card-icon-title {
+    align-content: center;
+  }
+
+  &__complete-check,
+  &__card-icon-title {
+    display: flex;
+  }
+
+  &__card-list {
+    padding: $padding + px;
+    > li > span {
+      margin-right: $margin-sm + px;
+    }
+  }
+
+  &__menu-card-title,
+  &__menu-card-title-extended {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0px 0px 0px $margin-sm + px;
+  }
+
+  &__menu-card-title {
+    max-width: 250px;
+  }
+
+  &__menu-card-title-extended {
+    max-width: 150px;
+  }
+
+  &__list-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $margin-lg + 20 + px;
+  }
+
+  &__exit {
+    margin: $margin-sm + px;
+  }
+
+  &__hidden {
+    display: none;
+  }
+
+  &__disabled {
+    color: $color-text-disabled;
+  }
+
+  &__carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 322px;
+    justify-content: center;
+    height: 100%;
+  }
+  .card-container__card-component {
+    height: 730px;
+  }
+  &__progress-markers {
+    width: 345px;
+  }
+
+  &__progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    > p {
+      margin: 0px;
+    }
+  }
+
+  &__drawer-divider {
+    position: relative;
+    left: -10px;
+    width: 110%;
+  }
+
+  @media screen and (max-width: 1500px) {
+    &__lesson-title {
+      max-width: 400px;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    &__lesson-title {
+      max-width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    &__lesson-title {
+      max-width: 200px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    &__lesson-title {
+      max-width: 100px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    &__lesson-title {
+      max-width: 0px;
+    }
+  }
+}
+
+.ant-drawer-header {
+  background-color: $color-bg-elevated;
+  > div.ant-drawer-header-title {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+}

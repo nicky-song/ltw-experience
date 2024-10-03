@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound Component matches snapshot 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "paddingTop": 100,
+    }
+  }
+>
+  <Text />
+  <Text
+    style={
+      {
+        "color": "#c0c0c0",
+        "fontSize": 20,
+        "fontWeight": "bold",
+        "marginTop": 20,
+      }
+    }
+  >
+    Page not found
+  </Text>
+</View>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActivityIndicator renders Small 1`] = `
+<ActivityIndicator
+  color="#6FC07A"
+  size="small"
+  testID="activity-indicator"
+/>
+`;
+
+exports[`ActivityIndicator should render 1`] = `
+<ActivityIndicator
+  color="#6FC07A"
+  size="large"
+  testID="activity-indicator"
+/>
+`;

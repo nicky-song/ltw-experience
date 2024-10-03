@@ -1,0 +1,42 @@
+@import '@/styles/_variables.scss';
+
+@mixin editing-gray-border {
+  width: 100%;
+  margin-left: $margin-xs + px;
+
+  & p {
+    width: 260px;
+    text-overflow: clip;
+  }
+
+  & div[data-slate-editor='true']:hover {
+    cursor: pointer;
+    box-shadow: none;
+    outline: 1px solid $color-border;
+    border-radius: 7px;
+  }
+  &.ant-popover-open,
+  & div[data-slate-editor='true']:focus-visible {
+    box-shadow: none;
+    border-radius: 7px;
+    outline: 1px solid $color-border;
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &.ant-typography-edit-content {
+    inset-inline-start: 0px;
+    margin-top: 0px;
+    margin-bottom: 0;
+  }
+
+  &.ant-typography-edit-content:hover {
+    box-shadow: none;
+  }
+
+  &.ant-typography-edit-content > textarea {
+    padding: 0px;
+  }
+}

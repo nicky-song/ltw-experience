@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Input should match snapshot 1`] = `
+<View
+  style={
+    {
+      "marginBottom": 24,
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "borderColor": "grey",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "height": 40,
+          "paddingHorizontal": 10,
+          "width": "100%",
+        },
+        null,
+      ]
+    }
+  >
+    <Text />
+    <TextInput
+      onChangeText={[MockFunction]}
+      placeholder="Email"
+      style={
+        {
+          "flex": 1,
+          "height": "100%",
+        }
+      }
+    />
+  </View>
+</View>
+`;

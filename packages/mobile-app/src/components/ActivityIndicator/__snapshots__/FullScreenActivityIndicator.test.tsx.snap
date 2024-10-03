@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FullScreenActivityIndicator Component matches snapshot 1`] = `
+<View
+  style={
+    {
+      "height": "100%",
+      "paddingTop": 150,
+    }
+  }
+>
+  <ActivityIndicator
+    color="#6FC07A"
+    size="large"
+    testID="activity-indicator"
+  />
+</View>
+`;
+
+exports[`FullScreenActivityIndicator Component matches snapshot 2`] = `
+<View
+  style={
+    {
+      "height": "100%",
+      "paddingTop": 150,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "marginBottom": 40,
+        "textAlign": "center",
+      }
+    }
+  >
+    test
+  </Text>
+  <ActivityIndicator
+    color="#6FC07A"
+    size="large"
+    testID="activity-indicator"
+  />
+</View>
+`;

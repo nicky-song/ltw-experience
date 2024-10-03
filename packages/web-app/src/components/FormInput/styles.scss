@@ -1,0 +1,21 @@
+@import '@/styles/_variables.scss';
+
+.form-input:focus,
+.form-input:hover {
+  border-color: $color-primary-bg;
+}
+.form-input::placeholder {
+  color: $color-primary-bg;
+}
+
+/* Disable chrome autofill color*/
+input[type='text'],
+textarea {
+  background-color: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}

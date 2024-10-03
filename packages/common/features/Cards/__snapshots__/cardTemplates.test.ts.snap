@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Templates should return the correct content block for all types: audio 1`] = `
+{
+  "id": "test",
+  "name": "Audio Name",
+  "type": "audio",
+  "url": "audio://url",
+}
+`;
+
+exports[`Card Templates should return the correct content block for all types: blank 1`] = `[]`;
+
+exports[`Card Templates should return the correct content block for all types: expandableList 1`] = `
+[
+  {
+    "id": "mocked-id",
+    "json": [
+      {
+        "children": [
+          {
+            "text": "Untitled",
+          },
+        ],
+        "type": "title",
+      },
+    ],
+    "type": "title",
+  },
+  {
+    "id": "mocked-id",
+    "sections": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Let's enhance the way users comprehend the information by infusing it with your own unique thoughts and ideas. So, go ahead and add your perspective to the mix – it's the key to making our content relatable and engaging!",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "id": "mocked-id",
+        "title": [
+          {
+            "children": [
+              {
+                "text": "Section Header 1",
+              },
+            ],
+            "type": "list-item",
+          },
+        ],
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Let's enhance the way users comprehend the information by infusing it with your own unique thoughts and ideas. So, go ahead and add your perspective to the mix – it's the key to making our content relatable and engaging!",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "id": "mocked-id",
+        "title": [
+          {
+            "children": [
+              {
+                "text": "Section Header 2",
+              },
+            ],
+            "type": "list-item",
+          },
+        ],
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Let's enhance the way users comprehend the information by infusing it with your own unique thoughts and ideas. So, go ahead and add your perspective to the mix – it's the key to making our content relatable and engaging!",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "id": "mocked-id",
+        "title": [
+          {
+            "children": [
+              {
+                "text": "Section Header 3",
+              },
+            ],
+            "type": "list-item",
+          },
+        ],
+      },
+    ],
+    "type": "expandableList",
+  },
+]
+`;
+
+exports[`Card Templates should return the correct content block for all types: media 1`] = `
+[
+  {
+    "id": "mocked-id",
+    "json": [
+      {
+        "children": [
+          {
+            "text": "Untitled",
+          },
+        ],
+        "type": "title",
+      },
+    ],
+    "type": "title",
+  },
+  {
+    "id": "mocked-id",
+    "name": "",
+    "type": "image",
+    "url": "",
+  },
+  {
+    "id": "mocked-id",
+    "json": [
+      {
+        "children": [
+          {
+            "text": "This is your body text. Ready to bring life to this empty space? Start adding info for your learners here.",
+          },
+        ],
+        "type": "paragraph",
+      },
+    ],
+    "type": "body",
+  },
+]
+`;
+
+exports[`Card Templates should return the correct content block for all types: slideshow 1`] = `[]`;
+
+exports[`Card Templates should return the correct content block for all types: subtitle 1`] = `
+{
+  "id": "test",
+  "json": [
+    {
+      "children": [
+        {
+          "text": "Subtitle Name",
+        },
+      ],
+      "type": "subtitle",
+    },
+  ],
+  "type": "subtitle",
+}
+`;
+
+exports[`Card Templates should return the correct content block for all types: text 1`] = `
+[
+  {
+    "id": "mocked-id",
+    "json": [
+      {
+        "children": [
+          {
+            "text": "Untitled",
+          },
+        ],
+        "type": "title",
+      },
+    ],
+    "type": "title",
+  },
+  {
+    "id": "mocked-id",
+    "json": [
+      {
+        "children": [
+          {
+            "text": "This is your body text. Ready to bring life to this empty space? Start adding info for your learners here.",
+          },
+        ],
+        "type": "paragraph",
+      },
+    ],
+    "type": "body",
+  },
+]
+`;
+
+exports[`Card Templates should return the correct content block for all types: video 1`] = `
+{
+  "id": "test",
+  "name": "Video Name",
+  "type": "video",
+  "url": "video://url",
+}
+`;

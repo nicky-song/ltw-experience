@@ -1,0 +1,21 @@
+{
+  "name": "l2w-monorepo",
+  "version": "0.1.0",
+  "description": "Monorepo for Learn to Win's JS and TS codebases.",
+  "main": "index.js",
+  "repository": "git@github.com:l2w-official/aegis.git",
+  "private": true,
+  "dependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
+    "husky": "0.8.0"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "prettier": "prettier --write \"packages/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+  }
+}

@@ -1,0 +1,13 @@
+@import '@/styles/_variables.scss';
+
+.course-container {
+  &__description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__details-button {
+    margin-right: $margin-xs + px;
+  }
+}

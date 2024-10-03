@@ -1,0 +1,160 @@
+@import '@/styles/_variables.scss';
+@import '../TextBlock/index.scss';
+@import '../index.scss';
+.knowledge-card-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: $padding-sm + px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+
+  &__button {
+    min-width: 180px;
+  }
+
+  &__try-again-button {
+    &.disabled-btn#form-button {
+      // hide button background and color show only text
+      background-color: transparent !important;
+      border: none;
+      color: $color-link;
+      pointer-events: none;
+    }
+  }
+  &__quiz-continue-button {
+    position: absolute;
+    width: 100% !important;
+  }
+}
+
+.multiple-choice {
+  padding: 0px $padding-xs + px $padding-xs + px $padding-xs + px;
+  margin: $margin-lg + px $margin-sm + px $margin-sm + px $margin-sm + px;
+  &--dragging {
+    box-sizing: border-box;
+    z-index: 1000;
+    position: relative;
+  }
+
+  &__question {
+    .content-block__editable {
+      @include editing-gray-border();
+      overflow: hidden;
+    }
+    margin-left: -$margin - 3 + px;
+    margin-bottom: $margin-sm + px;
+  }
+
+  &__controls--disabled {
+    .content-block__editable {
+      p {
+        width: 200px !important;
+      }
+    }
+  }
+
+  &__option-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .content-block {
+      margin-left: $margin-xs + px;
+      p {
+        width: 260px;
+        text-wrap: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .content-block__editable {
+      @include editing-gray-border();
+    }
+  }
+
+  &__option__error {
+    margin: $margin + px 0;
+    font-size: $font-size + px;
+    color: $color-error;
+  }
+
+  &__dropdown {
+    width: 100%;
+    > .ant-select-selector.ant-select-selector {
+      background-color: $color-bg-container;
+    }
+  }
+
+  &__type-desc {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    > p {
+      margin: 0px;
+    }
+  }
+
+  &__edit-options {
+    align-items: center;
+    > div {
+      margin-right: $margin-sm + px;
+    }
+    opacity: 0%;
+    display: none;
+    pointer-events: none;
+  }
+
+  &__edit-options--enabled {
+    opacity: 100%;
+    pointer-events: all;
+    display: flex;
+  }
+
+  &--editable {
+    @extend .content-block__editable;
+  }
+
+  &__block--disabled {
+    cursor: pointer;
+    input {
+      pointer-events: none;
+    }
+  }
+  div[data-slate-editor] {
+    padding: $padding-xs + px $padding-xs + px $padding-xs + px $padding-xs + px;
+    h1 {
+      margin: 0px;
+    }
+    width: 100%;
+  }
+
+  &__bottom-controls {
+    position: absolute;
+    width: 325px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: $margin-lg + px;
+    bottom: 0px;
+  }
+
+  &__bottom-checkbox {
+    margin-right: $margin-xs + px;
+  }
+
+  &__bottom-controls--hide {
+    display: none;
+  }
+
+  &__spacer {
+    height: 64px;
+  }
+
+  &__delete-btn--disable {
+    color: $color-text-disabled;
+  }
+}

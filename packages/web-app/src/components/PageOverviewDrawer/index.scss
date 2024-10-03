@@ -1,0 +1,40 @@
+@import '@/styles/variables';
+@import '../../pages/AdminLesson/NewCardDrawer/NewCardDrawer.scss';
+.page-overview-drawer {
+  &__input {
+    background-color: $color-bg-container;
+  }
+  &__input-label {
+    padding-top: $padding-xs + px;
+    padding-bottom: $padding-xs + px;
+  }
+
+  &__new-tag {
+    border-style: dashed;
+    > div {
+      margin: $margin-xxs + px;
+    }
+  }
+
+  .ant-drawer-body {
+    padding: 0 $padding-lg + px $padding + px $padding-lg + px !important;
+    overflow-x: hidden;
+  }
+
+  .ant-form-item {
+    margin-bottom: $margin + px;
+  }
+  
+  &__menu {
+    @extend .new-card-drawer__menu-nav;
+  }
+}
+
+.ant-drawer-header {
+  border-bottom: none !important;
+  padding-bottom: 0px;
+}
+
+.ant-drawer-close {
+  margin-inline-end: 0px !important;
+}

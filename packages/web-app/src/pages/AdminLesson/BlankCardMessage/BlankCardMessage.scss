@@ -1,0 +1,12 @@
+@import '@/styles/variables';
+
+.blank-card {
+  width: 120px;
+  height: 71px; // Apply height to prevent jumping when lottie animation loads
+  margin: $margin-lg + px auto;
+  transform: rotateY(180deg);
+
+  &--highlight {
+    color: $color-primary-hover;
+  }
+}

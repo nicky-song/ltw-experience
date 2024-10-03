@@ -1,0 +1,11 @@
+@import '@/styles/_variables.scss';
+
+.edit-control-character-count {
+  border-radius: 8px;
+  padding: 0px 0px 8px 12px;
+  width: 100%;
+
+  .edit-control-character-count-text {
+    padding: 4px 0px;
+  }
+}

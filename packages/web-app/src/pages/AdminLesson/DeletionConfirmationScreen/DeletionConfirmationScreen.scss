@@ -1,0 +1,27 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/card_variables.scss';
+.delete-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $red-1;
+  border-radius: $border-radius-lg + px;
+  border: $card-border-width solid $color-error-active;
+  box-sizing: content-box;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: $margin-xs + px;
+  }
+
+  &__buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px $padding + px;
+    margin-top: $margin-sm + px;
+    gap: $margin-xs + px;
+  }
+}

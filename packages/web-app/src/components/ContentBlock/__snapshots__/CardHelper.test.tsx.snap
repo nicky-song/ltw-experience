@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getContentBlocksFromCard should return the correct content blocks 1`] = `
+[
+  <TitleBlock
+    card={
+      {
+        "confidenceCheck": true,
+        "id": "123",
+        "json": {
+          "contentBlocks": [
+            {
+              "id": "1",
+              "text": "Test Title",
+              "type": "title",
+            },
+            {
+              "id": "2",
+              "text": "Test Subtitle",
+              "type": "subtitle",
+            },
+            {
+              "id": "3",
+              "text": "Test Body",
+              "type": "body",
+            },
+          ],
+          "description": "Test Description",
+          "templateType": null,
+          "version": "1",
+        },
+        "learningItem": "123",
+        "learningItemId": "123",
+        "sequenceOrder": 1,
+        "title": "Test Title",
+        "type": "lesson",
+      }
+    }
+    id="1"
+    showEditor={false}
+  />,
+  <SubtitleBlock
+    card={
+      {
+        "confidenceCheck": true,
+        "id": "123",
+        "json": {
+          "contentBlocks": [
+            {
+              "id": "1",
+              "text": "Test Title",
+              "type": "title",
+            },
+            {
+              "id": "2",
+              "text": "Test Subtitle",
+              "type": "subtitle",
+            },
+            {
+              "id": "3",
+              "text": "Test Body",
+              "type": "body",
+            },
+          ],
+          "description": "Test Description",
+          "templateType": null,
+          "version": "1",
+        },
+        "learningItem": "123",
+        "learningItemId": "123",
+        "sequenceOrder": 1,
+        "title": "Test Title",
+        "type": "lesson",
+      }
+    }
+    id="2"
+    showEditor={false}
+  />,
+  <BodyBlock
+    card={
+      {
+        "confidenceCheck": true,
+        "id": "123",
+        "json": {
+          "contentBlocks": [
+            {
+              "id": "1",
+              "text": "Test Title",
+              "type": "title",
+            },
+            {
+              "id": "2",
+              "text": "Test Subtitle",
+              "type": "subtitle",
+            },
+            {
+              "id": "3",
+              "text": "Test Body",
+              "type": "body",
+            },
+          ],
+          "description": "Test Description",
+          "templateType": null,
+          "version": "1",
+        },
+        "learningItem": "123",
+        "learningItemId": "123",
+        "sequenceOrder": 1,
+        "title": "Test Title",
+        "type": "lesson",
+      }
+    }
+    id="3"
+    showEditor={false}
+  />,
+]
+`;

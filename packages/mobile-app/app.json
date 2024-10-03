@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Learn To Win",
+    "slug": "learn-to-win",
+    "scheme": "learntowin",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#14142C"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.learntowin.mobile-app",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#14142C"
+      },
+      "package": "com.learntowin.learntowin",
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0f3450ef-0b8d-435c-b08a-e7ce9cb890f2"
+      }
+    },
+    "owner": "learn-to-win"
+  },
+  "plugins": [
+    "@heap/react-native-heap"
+  ]
+}

@@ -1,0 +1,55 @@
+@import '@/styles/_variables.scss';
+
+.option-select {
+  position: relative;
+  background-color: $color-bg-container;
+  border-radius: $border-radius-lg + px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: $margin + px;
+  cursor: pointer;
+  &__input {
+    margin: $margin-xxs + px $margin-xxs + px $margin-xxs + px $margin + px;
+    accent-color: $color-link;
+    cursor: pointer;
+    transform: scale(1.2);
+    &-success {
+      color: $color-link-hover;
+      margin: $margin-sm + px $margin-sm + px $margin-sm + px $margin-sm + 3 +
+        px;
+      position: absolute;
+      transform: scale(1.2);
+    }
+    &-failure {
+      color: $color-error-hover;
+      margin: $margin-sm + px $margin-sm + px $margin-sm + px $margin-sm + 3 +
+        px;
+      position: absolute;
+      transform: scale(1.2);
+    }
+    &--hidden {
+      opacity: 0;
+    }
+  }
+
+  &__success {
+    border: 1px solid $color-link-hover;
+    background-color: $color-success-bg;
+  }
+
+  &__failure {
+    outline: 1px solid $color-error-hover;
+    background-color: $color-error-bg;
+  }
+
+  &__selected {
+    border: 1px solid $color-link;
+  }
+
+  p {
+    margin: 0px;
+  }
+}

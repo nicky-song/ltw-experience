@@ -1,0 +1,23 @@
+@import '@/styles/variables.scss';
+
+.ai-quiz {
+  background: $color-bg-container;
+  height: 100%;
+
+  &__header {
+    display: flex;
+    justify-content: flex-start;
+    //left: 0px;
+    //top: 0px;
+    padding-top: $padding-sm + px;
+    padding-left: $padding + px;
+  }
+
+  &__question-option {
+    border: dashed 1px lightgrey;
+
+    &:hover {
+      border: solid 1px grey;
+    }
+  }
+}

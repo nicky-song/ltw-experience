@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto'
+      rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn To Win DOD</title>
+  </head>
+  <body>
+    <!-- Todo: remove when dod deployment ready -->
+    <h1> This Environment has not been set up for deployment in DOD environments
+      yet. </h1>
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+    <script>
+      /* 
+        Workaround for vite amplify error
+        https://github.com/aws-amplify/amplify-js/issues/678
+      */
+      if (global === undefined) {
+        var global = window;
+      }
+    </script>
+  </body>
+</html>

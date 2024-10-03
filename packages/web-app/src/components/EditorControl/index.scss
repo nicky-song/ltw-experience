@@ -1,0 +1,36 @@
+@import '@/styles/_variables.scss';
+
+.edit-control-menu-item {
+  gap: 8px;
+  width: 212px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.edit-control-divider {
+  height: 8px;
+  padding: 4px 0px;
+  margin: 0px;
+}
+
+.edit-control-format-align-divider {
+  height: 8px;
+}
+
+.edit-control-button-groups {
+  padding-bottom: 8px;
+}
+
+.format-button-group {
+  display: flex;
+  justify-content: flex-start;
+  padding: $padding-xs + px $padding + px;
+  gap: 24px;
+  background: $color-bg-layout;
+  border-radius: $border-radius-lg + px;
+
+  .custom-icon svg {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}

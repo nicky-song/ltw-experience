@@ -1,0 +1,45 @@
+@import '@/styles/_variables.scss';
+
+.item-editor-page {
+  height: 100%;
+  width: 100%;
+  background-color: $color-bg-container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin: $margin + px;
+    margin-top: $margin-sm + px;
+    width: 100%;
+  }
+
+  &__back-container {
+    display: flex;
+    align-items: center;
+    margin-left: $margin + px;
+    > a {
+      margin-right: $margin-sm + px;
+    }
+
+    > h5 {
+      margin: 0px;
+    }
+  }
+
+  &__menu-icon {
+    display: block;
+    position: relative;
+    left: 5px;
+    transform: rotate(90deg);
+  }
+
+  &__menu-icon:hover {
+    color: $color-primary-hover !important;
+  }
+
+  &__menu-btn {
+    margin-right: $margin + px;
+  }
+}

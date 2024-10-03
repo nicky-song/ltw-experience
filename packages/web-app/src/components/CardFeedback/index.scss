@@ -1,0 +1,159 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/card_variables.scss';
+@import '../ContentBlock/index.scss';
+
+@mixin feedback-overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 80%;
+  transition: visibility 0.25s, background-color 0.25s ease;
+}
+
+.feedback {
+  display: flex;
+  justify-content: center;
+  &__text-container {
+    position: absolute;
+    overflow-y: visible;
+    height: 226px;
+    bottom: -226px;
+    width: 100%;
+    display: none;
+  }
+
+  &__text-container::-webkit-scrollbar {
+    background-color: transparent;
+  }
+
+  @mixin show-feedback {
+    display: inline;
+    animation: feedbackRise 0.25s ease;
+    animation-delay: 0.25s;
+    animation-fill-mode: forwards;
+  }
+
+  @mixin disable-feedback {
+    animation: feedBackRetract 0.25s ease;
+    animation-fill-mode: forwards;
+  }
+
+  &--correct {
+    background-color: $color-success-bg;
+    @include show-feedback();
+  }
+
+  &--incorrect {
+    background-color: $color-error-bg;
+    @include show-feedback();
+  }
+
+  &--confidence {
+    background-color: $purple-1;
+    @include show-feedback();
+  }
+
+  &--disable-incorrect {
+    background-color: $color-error-bg;
+    @include disable-feedback();
+  }
+
+  &--disable-correct {
+    background-color: $color-success-bg;
+    @include disable-feedback();
+  }
+
+  &--disable-confidence {
+    background-color: $purple-1;
+    @include disable-feedback();
+  }
+
+  @keyframes feedbackRise {
+    0% {
+      bottom: -226px;
+    }
+
+    100% {
+      bottom: 0;
+    }
+  }
+
+  @keyframes feedBackRetract {
+    0% {
+      display: block;
+      bottom: 0;
+    }
+
+    100% {
+      display: none;
+      bottom: -226px;
+    }
+  }
+
+  @keyframes makeVisible {
+    from {
+      visibility: visible;
+    }
+
+    to {
+      visibility: hidden;
+    }
+  }
+
+  .content-block__editable {
+    @include editing-gray-border;
+    width: auto;
+    p {
+      padding: $padding-xxs + px;
+      margin: $margin-xs + px;
+    }
+    margin: 0;
+  }
+
+  &__card {
+    margin: $margin-sm + px;
+  }
+
+  &__celebration {
+    visibility: hidden;
+    border: none;
+    position: absolute;
+    height: $card-width;
+    width: $card-width;
+    bottom: 90px;
+    animation: makeVisible 2s ease;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+  }
+
+  &__overlay--enabled {
+    background-color: $color-bg-base;
+    visibility: visible;
+    @include feedback-overlay();
+  }
+
+  &__overlay--disabled {
+    background-color: transparent;
+    visibility: hidden;
+    @include feedback-overlay();
+  }
+}
+
+.disabled-confidence__overlay {
+  @include feedback-overlay();
+  opacity: 90%;
+  background-color: $color-primary;
+  color: $color-text-light-solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: $font-size + px;
+  font-weight: $font-weight-normal;
+
+  &__title {
+    font-size: $font-size-lg + px;
+    font-weight: $font-weight-strong;
+  }
+}

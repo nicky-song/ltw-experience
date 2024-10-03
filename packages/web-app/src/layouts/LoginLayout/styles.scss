@@ -1,0 +1,35 @@
+@import '@/styles/variables';
+
+.login-layout {
+  height: 100vh;
+
+  &__company-info {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: $margin-sm + px;
+    z-index: 2;
+  }
+
+  &__children {
+    z-index: 1;
+    background: $color-bg-container;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__company-name.ant-typography {
+    font-weight: $sm-sm-strong-font-weight;
+    font-size: $lg-lg-normal-font-size;
+    margin: $margin-sm + px 0 $margin-sm + px $margin-sm + px;
+  }
+
+  @media (max-width: 864px) {
+    &__company-info {
+      display: none;
+    }
+  }
+}

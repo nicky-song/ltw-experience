@@ -1,0 +1,22 @@
+@import '@/styles/_variables.scss';
+
+.password-requirements {
+  margin-top: $margin-lg + px;
+
+  &__requirements {
+    display: flex;
+    margin-bottom: $margin-sm + px;
+  }
+
+  &__leftContainer {
+    margin-right: auto;
+  }
+
+  &__check {
+    color: $color-success;
+  }
+
+  &__close {
+    color: $color-icon;
+  }
+}

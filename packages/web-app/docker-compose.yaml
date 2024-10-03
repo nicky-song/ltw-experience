@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  aegis:
+    image: 'learntowin/aegis'
+    build: ./
+    volumes:
+      - ./:/app
+    command: 'yarn start'
+    ports:
+      - '${APP_PORT:-3000}:3000'
+    networks:
+      - ltw-net
+    environment:
+      NODE_ENV: ${NODE_ENV:-development}
+
+networks:
+  ltw-net:
+    name: ltw-net

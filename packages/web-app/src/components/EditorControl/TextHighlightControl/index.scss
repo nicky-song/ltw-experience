@@ -1,0 +1,14 @@
+@import '@/styles/_variables.scss';
+
+.edit-control__url-form {
+  &__label {
+    margin-bottom: $margin-xs + px;
+  }
+  &__input {
+    background-color: $color-bg-container;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}

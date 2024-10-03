@@ -1,0 +1,92 @@
+@import '@/styles/variables';
+
+.create-learning-item__modal {
+  padding-bottom: 0;
+  & .ant-modal-content,
+  & .ant-modal-header {
+    background-color: $color-bg-container;
+  }
+
+  & .ant-modal-close {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: 1px solid $color-border;
+    background: $color-bg-container;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.02);
+  }
+}
+
+.create-learning-item__container {
+  margin-top: $margin + px;
+  margin-bottom: $margin + px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  &__icon {
+    background: linear-gradient(90deg, #afc8fd 0%, #fccae7 100%), #ffffff;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 6rem;
+    font-size: 1.5rem;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: $border-radius-lg + px;
+  }
+
+  &__text {
+    margin-left: $margin-sm + px;
+    margin-right: $margin-sm + px;
+  }
+
+  &__button {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__form .ant-form-item {
+    margin-bottom: $margin + px;
+  }
+
+  &__submit-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0px;
+  }
+}
+
+.arrow-icon {
+  font-size: 1.2rem;
+}
+
+.quiz-icon {
+  background: linear-gradient(90deg, #fb78bc 0%, #dd0879 100%), #ffffff;
+}
+
+.ai-icon {
+  background: linear-gradient(
+    90deg,
+    hsl(217.78deg 60% 69%) 0%,
+    hsl(159 94% 89% / 1) 100%
+  );
+}
+
+.course-details {
+  &__header-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: $padding-lg + px;
+    h4 {
+      margin: 0px;
+    }
+  }
+}

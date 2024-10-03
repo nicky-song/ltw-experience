@@ -1,0 +1,13 @@
+.eslintrc.json
+.eslintignore
+tsconfig.json
+
+# Mobile files
+packages/mobile-app/.expo
+packages/mobile-app/ios
+packages/mobile-app/android
+packages/mobile-app/coverage
+
+# Web files
+packages/web-app/coverage
+packages/web-app/dist

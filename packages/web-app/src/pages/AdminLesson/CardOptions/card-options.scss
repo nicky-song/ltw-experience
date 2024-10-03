@@ -1,0 +1,115 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/card_variables.scss';
+
+.card-options-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-bottom: $margin + px; // coerce to px
+  max-width: $card-width - 1;
+  transition: 300ms ease-in-out opacity;
+  width: 100%;
+  opacity: 1;
+
+  &__title:hover {
+    outline: 2px solid $color-border;
+    border-radius: 5px;
+  }
+  &__outline {
+    outline: 2px solid $color-border;
+    border-radius: 5px;
+  }
+  &--hidden {
+    display: none !important;
+    pointer-events: none;
+  }
+
+  > span {
+    display: flex;
+    align-items: center;
+    width: 60%;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+
+  &__title {
+    background-color: inherit;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0px;
+    border-style: none;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: $padding-xxs + 3 + px;
+    padding-right: 0px;
+  }
+
+  &__title-shortened {
+    width: 100%;
+  }
+
+  &__title:focus {
+    outline: none;
+  }
+
+  &__progress {
+    color: $color-primary-hover;
+    width: 20px !important;
+  }
+
+  &__progress .ant-progress-circle-path {
+    stroke: #6fc07a !important;
+  }
+
+  &__progress-container {
+    padding-top: $padding-xxs - 2 + px;
+    width: 40px;
+    padding-right: 5px;
+  }
+
+  &__divider {
+    margin: $margin-xxs + px 0 $margin-xxs + px 0;
+    padding: 0px;
+  }
+
+  &__dropdown-title {
+    width: 176px;
+    margin-left: $margin-sm + px;
+  }
+
+  &__dropdown-label {
+    > span {
+      margin-right: $margin-xs + px;
+    }
+  }
+
+  &__disabled {
+    pointer-events: none;
+  }
+
+  &__not-allowed {
+    cursor: not-allowed;
+  }
+}
+
+.ant-dropdown-menu-item-group-title {
+  padding: 0px !important;
+}
+.ant-dropdown-menu-item-group-list {
+  margin-left: 0px !important;
+}
+.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child {
+  padding: $padding-xxs + px $padding-sm + px !important;
+}
+
+.ant-dropdown-menu-item-active {
+  background-color: $color-success-bg !important;
+}

@@ -1,0 +1,60 @@
+@import '@/styles/_variables.scss';
+
+.content-block {
+  margin: $margin-sm + px;
+  &--component {
+    margin: $margin-lg + px 0px;
+    word-break: break-word;
+  }
+
+  &__editable {
+    &.ant-popover-open,
+    & div[data-slate-editor='true']:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 2px $color-primary;
+      border-radius: $border-radius-lg + px;
+    }
+    &:hover {
+      box-shadow: 0 0 0 2px $color-primary;
+      border-radius: $border-radius-lg + px;
+    }
+
+    &.ant-typography-edit-content {
+      inset-inline-start: 0px !important;
+      margin-top: 0px !important;
+      margin-bottom: 0.5em !important;
+    }
+
+    &.ant-typography-edit-content:hover {
+      box-shadow: none !important;
+    }
+
+    &.ant-typography-edit-content > textarea {
+      padding: 0px !important;
+    }
+
+    &.ant-popover-inner {
+      padding-bottom: $padding-xxs + px;
+    }
+  }
+
+  &__pointer {
+    cursor: pointer;
+  }
+
+  &__popup-button,
+  &__popup-button-mid {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: $padding-xxs - 2 + px;
+  }
+
+  &__popup-button-mid {
+    margin: 0px 0px $margin-xs + px 0px;
+  }
+
+  &__link {
+    color: $color-link-active;
+  }
+}

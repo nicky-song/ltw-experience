@@ -1,0 +1,145 @@
+@import '@/styles/_variables.scss';
+
+.expandable-block {
+  border: 2px solid transparent;
+  margin: $margin-sm + px $margin-sm + px $margin-lg + 20 + px $margin-sm + px;
+  outline: none;
+  .content-block {
+    margin: $margin-xs + px;
+    margin-left: -$margin-xs + px;
+  }
+  &__wrapper-hover:hover,
+  &__wrapper-focus:focus {
+    border: 2px solid $color-primary;
+    border-radius: $border-radius-lg + px;
+    cursor: pointer;
+  }
+
+  &__section-list {
+    padding-left: $padding-xxs + px;
+    padding-right: $padding-xxs + px;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: $color-bg-base;
+
+    &--selected {
+      cursor: pointer;
+    }
+  }
+}
+// Must be separate class because parent is lost when dragging
+.draggable-item {
+  &__drag {
+    margin-right: $margin + px;
+    color: $color-icon;
+    font-size: $font-size-lg;
+  }
+  &__section-title {
+    box-sizing: border-box;
+    max-width: 280px;
+    font-size: $font-size-lg + px;
+    font-family: $font-family;
+  }
+  p[data-slate-node='element'] {
+    margin-bottom: 0px;
+  }
+  &__unexpanded {
+    height: 0px;
+    transition: margin-bottom 0.26s;
+    margin-bottom: 0px;
+    overflow-y: hidden;
+  }
+  div[data-slate-editor] {
+    padding: $padding-sm + px $padding-xs + px $padding-sm + px $padding-xs + px;
+  }
+  &__expanded {
+    overflow-y: visible;
+    height: auto;
+    transition: margin-bottom 0.26s;
+    margin-bottom: $margin + px;
+    padding-bottom: $padding + px;
+  }
+
+  &__section-controls {
+    width: 100%;
+    position: relative;
+    bottom: -10px;
+    display: flex;
+    justify-content: center;
+    margin-top: $margin-lg + px;
+    button {
+      margin: 0 $margin + px 0 $margin + px;
+      border: none;
+      box-shadow: none;
+      transition: 0.26s ease-in;
+      background-color: transparent;
+    }
+  }
+
+  &__content-wrapper {
+    border: 1px solid transparent;
+    flex-grow: 1;
+    margin-right: $margin-xs + px;
+    background-color: $color-bg-base;
+  }
+
+  &__section-content {
+    background-color: $color-bg-base;
+  }
+
+  .content-block__editable {
+    & div[data-slate-editor='true']:hover {
+      cursor: pointer;
+      box-shadow: none;
+      outline: 1px solid $color-border;
+      border-radius: 7px;
+    }
+    &.ant-popover-open,
+    & div[data-slate-editor='true']:focus-visible {
+      box-shadow: none;
+      border-radius: 7px;
+      outline: 1px solid $color-border;
+    }
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &.ant-typography-edit-content {
+      inset-inline-start: 0px;
+      margin-top: 0px;
+      margin-bottom: 0;
+    }
+
+    &.ant-typography-edit-content:hover {
+      box-shadow: none;
+    }
+
+    &.ant-typography-edit-content > textarea {
+      padding: 0px;
+    }
+  }
+
+  &__disabled-icon {
+    color: $color-text-disabled;
+    transform: rotate(180deg);
+    transition: 0.26s all;
+  }
+  &__section {
+    position: relative;
+    width: 100%;
+  }
+
+  &__section-divider {
+    border-top: 1px solid $color-split;
+  }
+
+  &__is-dragging {
+    z-index: 10;
+  }
+}

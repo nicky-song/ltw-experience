@@ -1,0 +1,23 @@
+@import '@/styles/_variables.scss';
+
+.back-to-sign-in {
+  margin: $margin-lg + px;
+}
+
+.reset-password-text {
+  margin-bottom: $margin-lg + px;
+}
+
+.ant-typography.reset-password-title {
+  margin-bottom: $margin-lg + px;
+}
+
+.back-to-log-in {
+  width: 100%;
+}
+
+.check-email-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
